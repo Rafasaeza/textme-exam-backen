@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-# from backend.routers import headers_router
 from routers import headers_router
 from fastapi.middleware.cors import CORSMiddleware
 import os
@@ -8,7 +7,9 @@ app = FastAPI()
 
 #Añadir CORS
 origins = [
-    "http://localhost:3000",  
+    "https://text-me-exam-frontend.vercel.app",
+    "http://localhost:3000",  # Origen permitido
+    # Añade otros orígenes si es necesario
 ]
 
 app.add_middleware(
